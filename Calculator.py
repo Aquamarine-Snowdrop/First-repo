@@ -10,7 +10,13 @@ def multiply(a,b):
 def div(a,b):
     return a/b
 
-op = input("Enter operator (/ , * , + , - ) = ")
+def exponent(a,b):
+    c = 1
+    for i in range(b):
+        c = c*a
+    return c
+
+op = input("Enter operator (/ , * , + , - ,^) = ")
 num1 = int(input("Enter first number = "))
 num2 = int(input("Enter second number = "))
 
@@ -21,9 +27,11 @@ elif op == '-':
 elif op == '*':
     print("Product = ", str(multiply(num1 , num2)))
 elif op == '/':
-    print("Sum = ", str(add(num1 , num2)))
+    print("Sum = ", str(div(num1 , num2)))
+elif op == '^':
+    print("Result = ", str(exponent(num1 , num2)))
 else:
     print("Operator invalid")
-    
+
 
 
